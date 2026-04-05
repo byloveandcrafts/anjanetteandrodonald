@@ -1178,10 +1178,24 @@ footer{
 
 @media(max-width:600px){
   .dress-content{grid-template-columns:1fr;}
-  .countdown-grid{gap:1rem;}
-  .countdown-num{font-size:3rem;}
-  .countdown-dot{font-size:2rem;}
   .entourage-grid{grid-template-columns:1fr;}
+
+  /* Countdown: 2×2 grid on mobile */
+  .countdown-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.4rem 1rem;
+    max-width:320px;
+  }
+  .countdown-dot{display:none;}
+  .countdown-box{min-width:unset;width:100%;}
+  .countdown-num{font-size:clamp(2.4rem,14vw,3.4rem);}
+  .countdown-unit{font-size:0.58rem;letter-spacing:0.22em;}
+}
+
+@media(max-width:360px){
+  .countdown-grid{max-width:260px;gap:1rem 0.6rem;}
+  .countdown-num{font-size:2.2rem;}
 }
 </style>
 </head>
@@ -1348,7 +1362,7 @@ footer{
         <div class="sch-time">5:00<br>PM</div>
         <div class="sch-dot-wrap"><div class="sch-dot"></div></div>
         <div class="sch-info">
-          <div class="sch-event">Grand Reception & Lunch</div>
+          <div class="sch-event">Grand Reception & Dinner</div>
           <div class="sch-desc">Join us for a feast, speeches, and celebration!</div>
         </div>
       </div>
