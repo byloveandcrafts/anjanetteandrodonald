@@ -199,44 +199,22 @@ audio{display:none}
 
 /* ── NEW MONOGRAM CREST CSS ── */
 /* ── ELEGANT INTERLOCKING MONOGRAM ── */
-.hero-monogram {
-  font-family: var(--font-serif); /* Elegant Playfair Display */
-  font-style: italic; /* Adds a classic, high-end romantic slant */
-  font-size: clamp(6.5rem, 24vw, 13rem); /* Made slightly larger */
-  font-weight: 400;
-  color: var(--blush); 
-  line-height: 1;
-  opacity: 0;
-  animation: fadeUp 1.1s 0.5s ease both;
-  text-shadow: none; 
-  letter-spacing: -0.12em; /* Pulls the A and R tightly together */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* ── IMAGE MONOGRAM CSS ── */
 
-.hero-amp { 
-  font-family: var(--font-display); /* Swooping Great Vibes script for the & */
-  color: var(--gold); 
-  font-size: 0.95em; /* Large swooping swashes */
-  margin: 0 -0.22em; /* Forcibly overlaps the A and R over the ampersand */
-  position: relative;
-  z-index: 2; /* Lifts the & so its swashes weave over the A and R */
-  font-style: normal; 
-  transform: translateY(8%); /* Perfects the vertical alignment */
-  text-shadow: 2px 2px 8px rgba(26, 39, 68, 0.2); /* Soft drop shadow for a 3D layered look */
-}
+
+
+
 
 .hero-names {
   font-family: var(--font-serif);
-  font-size:clamp(1.6rem,5.5vw,2.6rem);
-  color:var(--white);
-  font-weight:400;
-  font-style:italic;
-  letter-spacing:0.06em;
-  margin-top:0.5rem;
-  opacity:0;
-  animation:fadeUp 1s 0.7s ease both;
+  font-size: clamp(1.6rem, 5.5vw, 2.6rem);
+  color: var(--white);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  margin-top: -1.5rem; /* This pulls "Anjanette and Rodonald" UPWARD closer to the monogram */
+  opacity: 0;
+  animation: fadeUp 1s 0.7s ease both;
 }
 .hero-names em{
   font-style:normal;
@@ -1274,8 +1252,13 @@ footer{
   <div class="hero-petals" id="hero-petals"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">We are getting married</p>
-    <h1 class="hero-monogram">A<span class="hero-amp">&</span>R</h1>
-    <h2 class="hero-names">Anjanette <em>and</em> Rodonald</h2>
+    
+    <div style="text-align: center; margin-bottom: 0; animation: fadeUp 1.1s 0.5s ease both; z-index: 10; position: relative;">
+      <img src="mono.png" alt="A & R Monogram" style="width: 100%; max-width: 380px; height: auto; display: inline-block;">
+    </div>
+    
+    <h2 class="hero-names" style="margin-top: -6rem; position: relative; z-index: 10;">Anjanette <em>and</em> Rodonald</h2>
+    
     <div class="hero-date">
       <div class="date-line"></div>
       <span class="hero-date-text">May 16, 2026</span>
